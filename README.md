@@ -6,6 +6,8 @@ gezeichnet werden. Dieses Repository enthält ein R-Skript, das alle
 Möglichkeiten, das Haus zu zeichnen, als Folge der Ziffern 1 bis 5, die die 
 Ecken (1) bis (5) repräsentieren, ausgibt.
 
+Wer liefert eine bessere, kürzere, elegantere Lösung?
+
 So sieht das Haus aus:
 
 ```
