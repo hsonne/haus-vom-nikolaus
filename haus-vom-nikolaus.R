@@ -15,7 +15,7 @@ edges <- c("12", "14", "15", "23", "24", "25", "34", "45")
 go <- function(path, seen = logical(length(edges))) {  
   
   if (length(path) == 9L) {
-    cat(paste(path, collapse = "-"), "\n")
+    writeLines(paste(path, collapse = "-"))
     return()
   }
   
