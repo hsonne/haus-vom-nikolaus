@@ -19,11 +19,8 @@ go <- function(path, seen = logical(length(edges))) {
     return()
   }
   
-  node <- path[length(path)]
-  
-  for (edge in grep(node, edges[! seen], value = TRUE)) {
+  for (edge in grep(node <- path[length(path)], edges[! seen], value = TRUE))
     go(c(path, gsub(node, "", edge)), `[<-`(seen, edges == edge, TRUE))
-  }
 }
 
 result <- capture.output(for (i in 1:5) go(i))
