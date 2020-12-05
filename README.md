@@ -2,7 +2,7 @@
 
 Wie viele Möglichkeiten gibt es, das "Haus vom Nikolaus" zu zeichnen? Es muss in
 einem Zug ohne Absetzen und ohne zweimaliges Zeichnen ein- und derselben Linie
-gezeichnet werden. Dieses Repository enthält ein R-Skript, das alle 
+gezeichnet werden. Dieses Repository enthält ein [R-Skript](haus-vom-nikolaus.R), das alle 
 Möglichkeiten, das Haus zu zeichnen, als Folge der Ziffern 1 bis 5, die die 
 Ecken (1) bis (5) repräsentieren, ausgibt.
 
