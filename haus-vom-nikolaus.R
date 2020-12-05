@@ -12,7 +12,7 @@
 
 links <- c("12", "14", "15", "23", "24", "25", "34", "45")
 
-go <- function(path, seen = stats::setNames(logical(length(links)), links)) {
+go <- function(path, seen = logical(length(links))) {  
   
   if (length(path) == 9L) {
     cat(paste(path, collapse = "-"), "\n")
@@ -21,8 +21,8 @@ go <- function(path, seen = stats::setNames(logical(length(links)), links)) {
   
   a <- path[length(path)]
   
-  for (b in gsub(a, "", grep(a, names(which(! seen)), value = TRUE))) {
-    go(c(path, b), `[<-`(seen, paste0(min(a, b), max(a, b)), TRUE))
+  for (link in grep(a, links[! seen], value = TRUE)) {
+    go(c(path, gsub(a, "", link)), `[<-`(seen, links == link, TRUE))
   }
 }
 
