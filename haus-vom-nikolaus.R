@@ -11,7 +11,6 @@
 # (1)-----(5)
 
 links <- c("12", "14", "15", "23", "24", "25", "34", "45")
-link <- function(a, b) do.call(paste0, as.list(sort(c(a, b))))
 
 go <- function(path, seen = stats::setNames(logical(length(links)), links)) {
   
@@ -23,7 +22,7 @@ go <- function(path, seen = stats::setNames(logical(length(links)), links)) {
   a <- path[length(path)]
   
   for (b in gsub(a, "", grep(a, names(which(! seen)), value = TRUE))) {
-    go(c(path, b), `[<-`(seen, link(a, b), TRUE))
+    go(c(path, b), `[<-`(seen, paste0(min(a, b), max(a, b)), TRUE))
   }
 }
 
